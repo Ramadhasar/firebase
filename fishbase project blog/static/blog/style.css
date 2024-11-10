@@ -1,0 +1,229 @@
+/* General Styles */
+p {
+    color: darkgray;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+/* Main content container with background overlay */
+.bg-body-tertiary {
+    background-color: blue !important;  
+}
+
+/* Navbar Styling */
+.navbar a.nav-link,
+.navbar .navbar-toggler,
+.navbar .navbar-toggler-icon {
+    color: white !important;
+    font-size: larger;
+}
+
+.navbar .navbar-brand{
+    font-size: x-large;
+    color: white ;
+    font-weight: 600;
+}
+
+.navbar a.nav-link:hover,
+.navbar .navbar-brand:hover {
+    color: #d3d3d3 !important;
+     
+}
+
+.navbar .btn-outline-success {
+    color: white !important;
+    border-color: white !important;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: white;
+    color: black !important;
+}
+
+/* Transitions for smooth hover effects */
+.navbar a.nav-link, .navbar .btn-outline-success {
+    transition: color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Intro Section: Covers full viewport height */
+.intro {
+    height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.intro-content { 
+    max-width: 600px; 
+}
+.intro h1 { 
+    font-size: calc(2.5rem + 2vw); 
+    color: white; 
+}
+.intro p { 
+    font-size: calc(1rem + 0.5vw); 
+    color: wheat;
+}
+.intro .btn { 
+    margin-top: 20px; 
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pagination Styles */
+.pagination .page-item .page-link {
+    color: #007bff;
+}
+
+.pagination .page-item .page-link:hover {
+    color: #0056b3; 
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d; 
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-item.active .page-link:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Image and Card Styles */
+.card img {
+    max-height: 250px; 
+    width: 100%; 
+    object-fit: cover;
+}
+
+.card {
+    background-color: white; 
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Related Posts Section */
+.card-title {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.card-body a:hover {
+    color: #0056b3;
+}
+
+/* Left column: White background with padding */
+.left-column {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+/* Right column card */
+.card {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive padding adjustments for smaller screens */
+@media (max-width: 768px) {
+    .left-column {
+        padding: 15px;
+    }
+}
+
+/* Content styling inside the left column */
+.left-column h1 {
+    font-size: 2rem;
+    color: #333; 
+}
+
+.left-column p {
+    color: #555; 
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+}
+
+footer a {
+    color: #ecf0f1; 
+}
+
+footer a:hover {
+    color: #3498db; 
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer .fa {
+    transition: color 0.3s ease;
+}
+
+footer .fa:hover {
+    color: #3498db;
+}
+
+footer hr {
+    border-color: rgba(236, 240, 241, 0.3); 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .container {
+    max-width: 1200px;
+}

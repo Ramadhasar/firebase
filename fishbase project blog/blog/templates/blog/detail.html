@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Main content: Blog Post -->
+      <div class="col-lg-8 bg-light">
+        <div class="blog-post">
+          <h1 class="mb-3 display-4">{{ post.title }} 
+            <small style="font-size:18px" class="text-muted">({{ post.category.name }})</small>
+          </h1>
+          <p class="text-muted">Posted on {{ post.created_at|date:"F j, Y" }}</p>
+          
+          <!-- Blog Image -->
+          <div class="post-image mb-4">
+            <img src="{{ post.img_url.url }}" class="img-fluid rounded shadow-lg" alt="{{ post.title }}">
+          </div>
+          
+          <!-- Blog Content -->
+          <div class="post-content" style="font-size: 1.1rem; line-height: 1.7;">
+            <p>{{ post.content }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sidebar: Related Posts -->
+      <div class="col-lg-4">
+        <div class="card mt-4 shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Related Posts</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              {% for related_post in related_posts %}
+              <li class="mb-2">
+                <a href="{% url 'blog:detail' slug=related_post.slug %}" class="text-decoration-none">
+                  <i class="bi bi-arrow-right-circle-fill text-primary"></i> {{ related_post.title }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+       
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Section: Call to Action -->
+  <section class="explore-section py-5 bg-light mt-5">
+    <div class="container text-center">
+      <h3>Explore More on Our Blog</h3>
+      <p>Check out more fish-related articles and tips in our blog.</p>
+      <a href="#" class="btn btn-outline-primary btn-lg">Explore Blog</a>
+    </div>
+  </section>
+{% endblock %}

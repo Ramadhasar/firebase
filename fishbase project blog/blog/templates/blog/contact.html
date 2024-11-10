@@ -1,0 +1,50 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-light">Contact Us</h2>
+
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-md-7">
+            <div class="card shadow-sm">
+                <div class="card-body bg-light">
+                    <h4 class="card-title text-center mb-4">Get in Touch</h4>
+                    <form method="POST" action="{% url 'blog:contact' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}  <!-- Render form fields -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info and Map -->
+        <div class="col-md-5">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body bg-light">
+                    <h4 class="card-title text-center mb-4">Our Contact Information</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <strong>Address:</strong> Tiruppur,Tamilnadu
+                        </li>
+                        <li class="mb-2">
+                            <strong>Email:</strong> ramadhasar2004@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <strong>Phone:</strong> +91 8248150946
+                        </li>
+                    </ul>
+                    <h5 class="text-center mt-4">Find Us on the Map</h5>
+                    <!-- Embed Google Map -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
